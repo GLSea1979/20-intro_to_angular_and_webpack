@@ -1,11 +1,12 @@
+
 // -- $variables ----
 
-$brand-primary: #444;
+$brand-primary: #364;
 $btn-primary: $brand-primary / 2;
 $btn-hover: #31b1c1;
 $black: #000;
 $white: #fff;
-$box-std: 40%;
+$box-std: 30%;
 $gutter-std: 5%;
 $gutter-sm: $gutter-std / 2;
 
@@ -58,6 +59,12 @@ pre {
 .container {
   float: left;
   width: $box-std;
+  margin: 5%;
+}
+
+.bigguy {
+  clear: left;
+  width: $box-std * 2;
   margin: 5%;
 }
 

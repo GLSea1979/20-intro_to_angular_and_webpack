@@ -19,6 +19,14 @@
         <p class="text-binder">{{ cowsayCtrl.bindText }}</p>
         <input type="text" ng-model="cowsayCtrl.bindText">
       </section>
+
+      <section class="bigguy" ng-controller="CowsayController">
+        <h2>{{ cowsayCtrl.title2}}</h2>
+        <input type="text" ng-model="cowsayCtrl.text">
+        <pre class="cow">{{ cowsayCtrl.speak2(cowsayCtrl.text) }}</pre>
+        <pre class="history">{{ cowsayCtrl.remember(cowsayCtrl.text) }}</pre>
+      </section>
+
     </main>
   </body>
 </html>
