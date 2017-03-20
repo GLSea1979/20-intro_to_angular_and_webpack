@@ -14,6 +14,7 @@ function CowsayController($log, $scope) {
   $log.debug('CowsayController');
 
   let cowsayCtrl = $scope.cowsayCtrl = {}
+  let previous = [];
 
   cowsayCtrl.title = 'Welcome to the farm!';
   cowsayCtrl.title2 = 'We eat people around here.'
@@ -29,7 +30,7 @@ function CowsayController($log, $scope) {
   };
 
   cowsayCtrl.remember = function(input) {
-    $log.debug('cowsayCtrl.remember')
+    $log.debug('cowsayCtrl.remember');
     
   }
 

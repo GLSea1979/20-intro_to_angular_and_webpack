@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/webpack/bin/webpack.js",
-    "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
+    "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors --inline --hot",
+    "monitor": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
     "lint": "./eslint.format()"
   },
   "repository": {
