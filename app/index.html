@@ -20,33 +20,48 @@
         class="container"
         ng-controller="CowsayController as cowsayCtrl"
         ng-init="cowsayCtrl.current = 'squirrel'">
-        <h2>{{ cowsayCtrl.title }}</h2>
 
-        <pre class="cow">
-          {{ cowsayCtrl.update(cowsayCtrl.text) }}
-        </pre>
+        <div class="cowfield">
+          <div class="describe">
+            <span class="largetitle">cow creator</span>
+            <span class="smalltitle">make it, view it, and undo it!</span>
+          </div>
+          <pre class="cow">
+            {{ cowsayCtrl.update(cowsayCtrl.text) }}
+          </pre>
+        </div>
 
         <form
           ng-submit="cowsayCtrl.speak(cowsayCtrl.text)"
           name="cowsayForm"
           no validate>
-          <select ng-model="cowsayCtrl.current">
+          <select class="selector" ng-model="cowsayCtrl.current">
             <option ng-repeat="cowfile in cowsayCtrl.cowfiles" value="{{ cowfile }}">
               {{ cowfile }}
             </option>
           </select>
 
-          <input type="text" ng-model="cowsayCtrl.text" required>
-          <button type="submit">Speak!</button>
+          <input class="selector" type="text" ng-model="cowsayCtrl.text" required>
+          <button class="selector" type="submit">Speak!</button>
 
-          <div ng-show="cowsayCtrl.spoken" class="history">
-            <pre>
-              {{ cowsayCtrl.spoken }}
-            </pre>
-            <button type="button" ng-click="cowsayCtrl.undo()">Undo!</button>
+          <div class="line"></div>
+
+          <div class="cowfield">
+            <div ng-show="cowsayCtrl.spoken"  class="history" >
+              <div class="describe">
+                <span class="largetitle">view it!</span>
+                <span class="smalltitle">check out the cow you just made!</span>
+              </div>
+              <pre>
+                {{ cowsayCtrl.spoken }}
+              </pre>
+            </div>
           </div>
+          <button class="selector" type="button" ng-click="cowsayCtrl.undo()">undo this cow!</button>
+
         </form>
       </section>
     </main>
+    <footer></footer>
   </body>
 </html>
